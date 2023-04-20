@@ -8,7 +8,7 @@ class Sketch_21 extends CTSketch {
     }
 
     startSketch() {
-        colorMode(HSB)
+        colorMode(HSB, 255)
     }
 
     display() {
