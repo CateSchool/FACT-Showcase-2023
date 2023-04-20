@@ -1,4 +1,4 @@
-const NUM_SKETCHES = 21;
+const NUM_SKETCHES = 22;
 const sketches = [];
 let frameR = 60;
 let currentSketch;
@@ -8,8 +8,8 @@ let lastChanged = 0;
 let scaleNum = 1;
 
 function setup() {
-    
-    let canvas = createCanvas(500*scaleNum, 500*scaleNum);
+
+    let canvas = createCanvas(500 * scaleNum, 500 * scaleNum);
     canvas.parent('sketch-holder');
 
 
@@ -19,7 +19,7 @@ function setup() {
 
 function draw() {
     frameRate(frameR);
-    
+
     if (currentSketch) {
         currentSketch.display();
     }
@@ -28,7 +28,7 @@ function draw() {
 
 function changeSketch() {
 
-    if (millis() - lastChanged > 14*1000) {
+    if (millis() - lastChanged > 14 * 1000) {
         sketchForward();
     }
 }
@@ -97,6 +97,12 @@ function setSketch() {
         case 19:
             currentSketch = new Sketch_19();
             break;
+        case 20:
+            currentSketch = new Sketch_20();
+            break;
+        case 21:
+            currentSketch = new Sketch_21();
+            break;
         default:
             currentSketch = new Sketch_00();
             break;
@@ -132,8 +138,8 @@ function sketchForward() {
 function sketchBackward() {
     lastChanged = millis();
     currentSketchIndex--;
-    if (currentSketch < 0) {
-        currentSketch = NUM_SKETCHES-1;
+    if (currentSketchIndex < 0) {
+        currentSketchIndex = NUM_SKETCHES - 1;
     }
     setSketch();
 }

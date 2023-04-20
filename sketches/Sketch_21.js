@@ -4,7 +4,7 @@ class Sketch_21 extends CTSketch {
 
     constructor() {
         super("Salar Ghumman", 21);
-        this.mode == 0;
+        this.mode = 0;
     }
 
     startSketch() {

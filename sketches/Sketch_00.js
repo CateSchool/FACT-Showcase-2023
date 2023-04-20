@@ -10,7 +10,9 @@ class Sketch_00 extends CTSketch {
     }
 
     display() {
-        for (let x = 0; x < (mouseX + mouseY) / 50; x++) {
+        // let mx = constrain(mouseX, 20, width);
+        // let my = constrain(mouseY, 20, height);
+        for (let x = 0; x < 10; x++) {
             fill('white');
             noStroke();
             ellipse(mouseX, mouseY, 200);

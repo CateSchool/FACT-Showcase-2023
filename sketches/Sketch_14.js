@@ -121,7 +121,7 @@ class Sketch_14 extends CTSketch {
         /// title
 
         fill(255, 0, 150);
-        textSize(17, 600, 300);
+        textSize(17);
         text("Philosophy Snowman: Solves all your problems!*", 67, 470);
 
         /// key required text
