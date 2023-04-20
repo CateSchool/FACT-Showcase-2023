@@ -4,6 +4,7 @@ class Sketch_14 extends CTSketch {
 
     constructor() {
         super("Tree Payne", 14);
+
         this.quotes = [
             'do you think god stays in heaven because he fears what he created?',
             "holding onto anger is like drinking poison and expecting the other person to die.",
@@ -15,7 +16,7 @@ class Sketch_14 extends CTSketch {
             "the only true wisdom is knowing you know nothing.",
             "i'm not payed enough for this."
         ];
-        this.quote = quotes[0];
+        this.quote = this.quotes[0];
     }
 
     startSketch() {
@@ -26,7 +27,7 @@ class Sketch_14 extends CTSketch {
         if (frameCount % 180 == 0) {
             this.quote = random(this.quotes);
         }
-        
+
         background(255, 200, 200);
 
         translate(0, 30 * sin(frameCount / 10))

@@ -15,6 +15,7 @@ class CTSketch {
         frameR = this.frameR;
         select("#stuentName").html(this.student);
 
+        colorMode(RGB, 255);
         rectMode(CORNER);
         angleMode(RADIANS);
 

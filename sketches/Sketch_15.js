@@ -3,42 +3,99 @@
 class Sketch_15 extends CTSketch {
 
     constructor() {
-        super("Sam Anum", 15);
+        super("Luke Ashiku", 15);
+
+        this.points = [];
+        for (let i = 0; i < 550; i++) {
+            this.points.push({ x: random(width), y: random(height) })
+        }
     }
 
     startSketch() {
-        rectMode(CENTER);
-        angleMode(DEGREES);
-        noFill();
     }
 
     display() {
-        background(random(0), random(28));
 
-        let s = random(200);
-        stroke(random(255), random(235), random(90));
+        if (mouseIsPressed) {
+            background(0);
+            randomSeed(0);
+            for (let i = 0; i < this.points.length - 1; i++) {
+                let p = this.points[i];
+                let nextP = random(this.points);
+                stroke(255)
+                ellipse(p.x, p.y, 3);
+                line(p.x, p.y, nextP.x, nextP.y);
+                line(p.x, p.y, mouseX, mouseY);
+            }
 
-        rect(width / 2, height / 2, s);
-        // triangle(30, 75, 58, 20, 86, 75);
-        // triangle(30, 400, 58, 350, 86, 400);
-        //triangle(540, 75, 500, 20, 476, 75);
-        // triangle(540, 400, 500, 350, 476, 400);
-        // line(10, 75, 555, 75);
-        //line(10, 400, 555, 400);
-
-
-
-        for (let angle = 0; angle < 360; angle += 20) {
-            push();
-            translate(width / 2, height / 2);
-            rotate(angle + frameCount);
-            ellipse(0, 210, random(50));
-            line(20, 200, 545, 200);
-            line(0, 0, 0, 200);
-            pop();
+        }
+        else {
+            background(255);
+            for (const p of this.points) {
+                stroke(0);
+                ellipse(p.x, p.y, 1);
+                line(p.x, p.y, mouseX, mouseY);
+            }
+        }
+        if (keyIsDown(77)) {
+            background(255, 80, 10);
+            randomSeed(0);
+            for (let i = 0; i < this.points.length - 1; i++) {
+                let p = this.points[i];
+                let nextP = random(this.points);
+                stroke(50, 0, 25)
+                ellipse(p.x, p.y, 1);
+                line(p.x, p.y, nextP.x, nextP.y);
+                line(p.x, p.y, mouseX, mouseY);
+            }
+        }
+        if (keyIsDown(78)) {
+            background(0);
+            randomSeed(0);
+            for (let i = 0; i < this.points.length - 1; i++) {
+                let p = this.points[i];
+                let nextP = random(this.points);
+                stroke(20, 9, 138,)
+                ellipse(p.x, p.y, 1);
+                line(p.x, p.y, nextP.x, nextP.y);
+                line(p.x, p.y, mouseX, mouseY);
+            }
+        }
+        if (keyIsDown(66)) {
+            background('red');
+            randomSeed(0);
+            for (let i = 0; i < this.points.length - 1; i++) {
+                let p = this.points[i];
+                let nextP = random(this.points);
+                stroke(21, 130, 12,)
+                ellipse(p.x, p.y, 1);
+                line(p.x, p.y, nextP.x, nextP.y);
+                line(p.x, p.y, mouseX, mouseY);
+            }
+        }
+        if (keyIsDown(32)) {
+            this.randomBackground();
+            randomSeed(0);
+            for (let i = 0; i < this.points.length - 1; i++) {
+                let p = this.points[i];
+                let nextP = random(this.points);
+                this.randomStroke();
+                ellipse(p.x, p.y, 1);
+                line(p.x, p.y, nextP.x, nextP.y);
+                line(p.x, p.y, mouseX, mouseY);
+            }
         }
 
     }
 
-
+    randomBackground() {
+        randomSeed(millis());
+        background(random(255), random(255), random(255));
+      }
+      
+     randomStroke() {
+        randomSeed(millis());
+        stroke(random(255), random(255), random(255));
+      }
+      
 }

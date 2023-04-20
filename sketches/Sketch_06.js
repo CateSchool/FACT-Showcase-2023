@@ -15,33 +15,30 @@ class Sketch_06 extends CTSketch {
         let col1 = color(143, 198, 242);
         let col2 = color(2, 9, 61);
         let col = lerpColor(col1, col2, mouseY / height * 2);
-        console.log(mouseY);
+   
         background(col);
         //mountain
         let mntcol1 = color(232, 196, 242);
         let mntcol2 = color(92, 56, 102);
         let mntcol = lerpColor(mntcol1, mntcol2, mouseY / height * 2);
-        console.log(mouseY);
+     
         //ground
         let grndcol1 = color(130, 84, 158);
         let grndcol2 = color(60, 12, 89);
         let grndcol = lerpColor(grndcol1, grndcol2, mouseY / height * 2);
-        console.log(mouseY);
+     
         //cloud
         let cldcol1 = color('white');
         let cldcol2 = color(78, 78, 78);
         let cldcol = lerpColor(cldcol1, cldcol2, mouseY / height * 2);
-        console.log(mouseY);
         //plane
         let plncol1 = color('white');
         let plncol2 = color('grey');
         let plncol = lerpColor(plncol1, plncol2, mouseY / height * 2);
-        console.log(mouseY);
         //stars
         let strcol1 = color(143, 198, 242);
         let strcol2 = color('white');
         let strcol = lerpColor(strcol1, strcol2, mouseY / height * 2);
-        console.log(mouseY);
         //moon
         fill(245, 240, 225)
         ellipse(width / 2, height - mouseY, 100)

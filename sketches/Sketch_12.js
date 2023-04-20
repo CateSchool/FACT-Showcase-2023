@@ -4,6 +4,7 @@ class Sketch_12 extends CTSketch {
 
     constructor() {
         super("Elise Tsai", 12);
+        this.sz = 1;
     }
 
     startSketch() {
@@ -31,7 +32,7 @@ class Sketch_12 extends CTSketch {
                         stroke(random(windowWidth), windowWidth, windowWidth);
                     }
 
-                    rect(140 * x - 50, 140 * y - 50, 160 / 15 * z * sz);
+                    rect(140 * x - 50, 140 * y - 50, 160 / 15 * z * this.sz);
 
                 }
             }
@@ -41,8 +42,8 @@ class Sketch_12 extends CTSketch {
     }
 
     changeSz() {
-        sz = 10 + 10 * sin(millis() / 5000);
-        sz = constrain(sz, 0.5, 20);
+        this.sz = 10 + 10 * sin(millis() / 5000);
+        this.sz = constrain(this.sz, 0.5, 20);
     }
 
 

@@ -7,7 +7,7 @@ class Sketch_03 extends CTSketch {
   }
 
   startSketch() {
-
+    colorMode(HSB, 255);
   }
 
   display() {

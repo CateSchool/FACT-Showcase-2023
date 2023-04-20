@@ -17,7 +17,7 @@ class Sketch_10 extends CTSketch {
         for (let x = 1; x < 10; x++) {
           for (let y = 1; y < 10; y++) {
             let alt = amp * sin(millis() / 1000);
-            console.log(Math.round(alt))
+            // console.log(Math.round(alt))
             if (mouseIsPressed) {
               let alt = random(-5, 5) + amp * sin(millis() / 200 + -y / 5 + x/5);
               //   background(random(200), 0, 0)

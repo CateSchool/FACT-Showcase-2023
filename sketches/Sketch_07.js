@@ -31,23 +31,23 @@ class Sketch_07 extends CTSketch {
             noStroke()
             fill(254, 252, 215)
             arc(250, 450, 160, 160, 0.5 * PI, 1.5 * PI)
-            fill(backgroundcolor)
+            fill(this.backgroundcolor)
             arc(250, 450, -160 + mouseX / width * 640, 160, 0.5 * PI, 1.5 * PI);
         }
         // moon getting bigger from middle
         else if (width / 4 < mouseX && mouseX < width / 2) {
-            console.log("1/4-1/2")
+            // console.log("1/4-1/2")
             noStroke()
             fill(254, 252, 215)
             arc(250, 450, 160, 160, 0.5 * PI, 1.5 * PI)
-            fill(backgroundcolor)
+            fill(this.backgroundcolor)
             arc(250, 450, 160, 160, 1.5 * PI, 0.5 * PI);
             fill(254, 252, 215)
             arc(250, 450, -160 + mouseX / width * 640, 160, 1.5 * PI, 0.5 * PI)
         }
         // moon getting smaller from left
         else if (width / 2 < mouseX && mouseX < width * 3 / 4) {
-            console.log("1/2-3/4")
+            // console.log("1/2-3/4")
             noStroke()
             fill(254, 252, 215)
             arc(250, 450, 160, 160, 1.5 * PI, 0.5 * PI);
@@ -58,7 +58,7 @@ class Sketch_07 extends CTSketch {
             noStroke()
             fill(254, 252, 215)
             arc(250, 450, 160, 160, 1.5 * PI, 0.5 * PI)
-            fill(backgroundcolor)
+            fill(this.backgroundcolor)
             arc(250, 450, 160 * 4 * (-width * 3 / 4 + mouseX) / width, 160, 1.5 * PI, 0.5 * PI)
         }
         for (let y = -80; y < 80; y += 9.41175) {
