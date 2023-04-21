@@ -28,22 +28,22 @@ class Sketch_21 extends CTSketch {
 
 
                 if (this.mode %2 < 1) {
-                    let h = (255 / 11 * x - frameCount)
+                    let h = (255 / 11 * x - frameCount%255)
                     fill(h % 300, 255, 200)
                     rect(h % 20000, 0, 5, height)
                 }
                 if (this.mode %3 < 2) {
-                    let h = (-255 / 11 * x + frameCount)
+                    let h = (-255 / 11 * x + frameCount%255)
                     fill(h % 300, 255, 200)
                     rect(h % 20000, 0, 5, height)
                 }
                 if (this.mode % 4 < 3) {
-                    let h = (-255 / 11 * x + frameCount)
+                    let h = (-255 / 11 * x + frameCount%255)
                     fill(h % 300, 255, 200)
                     rect(0, h % 20000, width, 5)
                 }
                 if (this.mode % 5 < 4) {
-                    let h = (255 / 11 * x - frameCount)
+                    let h = (255 / 11 * x - frameCount%255)
                     fill(h % 300, 255, 200)
                     rect(0, h % 20000, width, 5)
                 }
